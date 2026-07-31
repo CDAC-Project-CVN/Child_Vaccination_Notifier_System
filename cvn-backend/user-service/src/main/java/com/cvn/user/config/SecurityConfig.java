@@ -76,9 +76,28 @@ public class SecurityConfig {
                             "/actuator/health")
                     .permitAll()
 
+                    // CORS Pre-flight
                     .requestMatchers(HttpMethod.OPTIONS, "/**")
                     .permitAll()
+                    
+                    // Public Clinic APIs
+                    .requestMatchers(HttpMethod.GET, "/api/clinics")
+                    .permitAll()
+                    
+                    .requestMatchers(HttpMethod.GET, "/api/clinics/*")
+                    .permitAll()
+                    
+                    // Parent APIs
+                    .requestMatchers("/api/parents/**")
+                    .hasRole("PARENT")
+                    
+                    .requestMatchers("/api/children/**")
+                    .hasRole("PARENT")
 
+                     // Clinic APIs
+                    .requestMatchers("/api/clinics/profile")
+                    .hasRole("CLINIC")
+                    
                     .anyRequest()
                     .authenticated());
 
@@ -89,9 +108,7 @@ public class SecurityConfig {
     AuthenticationProvider authenticationProvider() {
 
         DaoAuthenticationProvider provider =
-                new DaoAuthenticationProvider();
-
-        provider.setUserDetailsService(customUserDetailsService);
+                new DaoAuthenticationProvider(customUserDetailsService);
 
         provider.setPasswordEncoder(passwordEncoder());
 

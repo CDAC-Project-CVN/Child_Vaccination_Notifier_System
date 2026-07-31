@@ -8,8 +8,7 @@ import lombok.*;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor  
+@NoArgsConstructor  
 @ToString(callSuper = true, exclude = {"myUser", "myChild"})
 //@Builder
 @Entity

@@ -65,17 +65,17 @@ public class AuthController {
     }
 
     @PostMapping("/logout")
-    public ResponseEntity<ApiResponse> logout(
+    public ResponseEntity<ApiResponse<AuthResponse>> logout(
             @Valid @RequestBody RefreshTokenRequest request) {
 
         authService.logout(request);
 
         return ResponseEntity.ok(
-        	    ApiResponse.builder()
-        	            .success(true)
-        	            .message("Logout successful.")
-        	            .build()
-        	);
+        		ApiResponse.<AuthResponse>builder()
+                .success(true)
+                .message("Login successful")
+                .build()
+        );
     }
 
 }
