@@ -1,4 +1,4 @@
-package com.backend.config;
+package com.cvn.vaccination.config;
 
 import org.modelmapper.Conditions;
 import org.modelmapper.ModelMapper;
