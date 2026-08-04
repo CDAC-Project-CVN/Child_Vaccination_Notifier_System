@@ -1,6 +1,5 @@
 package com.cvn.vaccination.controller;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
@@ -26,11 +25,9 @@ public class VaccineScheduleController {
      */
     
     @PostMapping("/generate/{childId}")
-    public ResponseEntity<ApiResponse<Void>> generateSchedules(
-            @PathVariable Long childId,
-            @RequestParam LocalDate dateOfBirth) {
+    public ResponseEntity<ApiResponse<Void>> generateSchedules(@PathVariable Long childId) {
 
-        vaccineScheduleService.generateSchedulesForChild(childId, dateOfBirth);
+        vaccineScheduleService.generateSchedulesForChild(childId);
         return ResponseEntity.ok(
                 ApiResponse.<Void>builder()
                         .success(true)

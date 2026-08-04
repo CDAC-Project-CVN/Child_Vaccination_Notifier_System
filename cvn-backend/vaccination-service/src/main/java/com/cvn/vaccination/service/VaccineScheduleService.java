@@ -7,6 +7,8 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.cvn.vaccination.client.UserServiceClient;
+import com.cvn.vaccination.dto.internal.ChildInfoResponse;
 import com.cvn.vaccination.dto.response.VaccineScheduleResponse;
 import com.cvn.vaccination.entity.Vaccine;
 import com.cvn.vaccination.entity.VaccineSchedule;
@@ -25,21 +27,18 @@ public class VaccineScheduleService {
     private final VaccineScheduleRepository vaccineScheduleRepository;
     private final VaccineRepository vaccineRepository;
     
+    private final UserServiceClient userServiceClient;   // OpenFeign client
+    
     
     /*
      * Generate vaccination schedule for newly registered child
      */
     
-    public void generateSchedulesForChild(Long childId, LocalDate dateOfBirth) {
-
-		List<Vaccine> vaccines = vaccineRepository.findAll();
-		List<VaccineSchedule> schedules = new ArrayList<>();
-		for (Vaccine vaccine : vaccines) {
-			for (int dose = 1; dose <= vaccine.getNumberOfDoses(); dose++) {
-				schedules.add(createSchedule(childId, vaccine, dateOfBirth, dose));
-			}
-		}
-		vaccineScheduleRepository.saveAll(schedules);
+    public void generateSchedulesForChild(Long childId) {
+    	// accessing child dob using OpenFeign
+    	ChildInfoResponse child = userServiceClient.getChildInfo(childId); 
+    	
+    	generateSchedule(child.getChildId(), child.getDateOfBirth());
     }
     
     private VaccineSchedule createSchedule(Long childId, Vaccine vaccine, LocalDate dateOfBirth, Integer doseNumber) {
@@ -147,5 +146,19 @@ public class VaccineScheduleService {
         return mapToResponse(
                 getScheduleEntity(scheduleId));
     }
+    
+    
+    @Transactional
+    public void generateSchedule(Long childId,
+                                 LocalDate dateOfBirth) {
 
+    	List<Vaccine> vaccines = vaccineRepository.findAll();
+		List<VaccineSchedule> schedules = new ArrayList<>();
+		for (Vaccine vaccine : vaccines) {
+			for (int dose = 1; dose <= vaccine.getNumberOfDoses(); dose++) {
+				schedules.add(createSchedule(childId, vaccine, dateOfBirth, dose));
+			}
+		}
+		vaccineScheduleRepository.saveAll(schedules);
+    }
 }

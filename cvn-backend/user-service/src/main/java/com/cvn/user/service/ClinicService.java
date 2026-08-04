@@ -6,6 +6,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.cvn.user.dto.internal.ClinicInfoResponse;
 import com.cvn.user.dto.request.UpdateClinicRequest;
 import com.cvn.user.dto.response.ClinicProfileResponse;
 import com.cvn.user.entity.Clinic;
@@ -111,6 +112,27 @@ public class ClinicService {
         response.setPincode(user.getPincode());
         response.setLatitude(user.getLatitude());
         response.setLongitude(user.getLongitude());
+
+        return response;
+    }
+
+    @Transactional(readOnly = true)
+    public ClinicInfoResponse getClinicInfo(Long clinicId) {
+
+        Clinic clinic = clinicRepository.findById(clinicId)
+                .orElseThrow(() ->
+                        new ResourceNotFoundException("Clinic not found."));
+
+        ClinicInfoResponse response = new ClinicInfoResponse();
+
+        response.setClinicId(clinic.getId());
+        response.setClinicName(clinic.getClinicName());
+        response.setStatus(clinic.getStatus());
+
+        User user = clinic.getMyUser();
+
+        response.setCity(user.getCity());
+        response.setState(user.getState());
 
         return response;
     }

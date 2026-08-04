@@ -7,6 +7,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.cvn.user.dto.internal.ChildInfoResponse;
 import com.cvn.user.dto.request.AddChildRequest;
 import com.cvn.user.dto.request.UpdateChildRequest;
 import com.cvn.user.dto.response.ChildResponse;
@@ -14,8 +15,10 @@ import com.cvn.user.dto.response.MessageResponse;
 import com.cvn.user.entity.Child;
 import com.cvn.user.entity.Parent;
 import com.cvn.user.entity.User;
+import com.cvn.user.event.ChildRegisteredEvent;
 import com.cvn.user.exception.ResourceNotFoundException;
 import com.cvn.user.exception.UnauthorizedException;
+import com.cvn.user.messaging.RabbitMQProducer;
 import com.cvn.user.repository.ChildRepository;
 import com.cvn.user.repository.ParentRepository;
 import com.cvn.user.repository.UserRepository;
@@ -32,6 +35,7 @@ public class ChildService {
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
     
+    private final RabbitMQProducer rabbitMQProducer;   // injecting producer
     
     private Parent getLoggedInParent() {
         String email = SecurityContextHolder
@@ -80,6 +84,14 @@ public class ChildService {
         child.setMyParent(parent);
 
         Child savedChild = childRepository.save(child);
+        
+        // create and publish the event
+        ChildRegisteredEvent event = ChildRegisteredEvent.builder()
+                .childId(savedChild.getId())
+                .dateOfBirth(savedChild.getDateOfBirth())
+                .build();
+
+        rabbitMQProducer.publishChildRegisteredEvent(event);
 
         return modelMapper.map(savedChild, ChildResponse.class);
     }
@@ -129,4 +141,18 @@ public class ChildService {
         return new MessageResponse(
                 "Child deleted successfully.");
     }
+
+    @Transactional(readOnly = true)
+	public ChildInfoResponse getChildInfo(Long childId) {
+
+	    Child child = childRepository.findById(childId)
+	            .orElseThrow(() -> new ResourceNotFoundException("Child not found."));
+	    ChildInfoResponse response = new ChildInfoResponse();
+	    response.setChildId(child.getId());
+	    response.setFirstName(child.getFirstName());
+	    response.setLastName(child.getLastName());
+	    response.setDateOfBirth(child.getDateOfBirth());
+	    response.setParentId(child.getMyParent().getId());
+	    return response;
+	}
 }

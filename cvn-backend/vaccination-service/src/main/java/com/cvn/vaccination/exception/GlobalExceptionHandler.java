@@ -124,5 +124,25 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
     }
+    
 
+    @ExceptionHandler(ServiceCommunicationException.class)
+    public ResponseEntity<ErrorResponse>
+    handleServiceCommunicationException(
+            ServiceCommunicationException ex,
+            HttpServletRequest request) {
+
+        ErrorResponse response =
+                new ErrorResponse(
+                        LocalDateTime.now(),
+                        HttpStatus.SERVICE_UNAVAILABLE.value(),
+                        HttpStatus.SERVICE_UNAVAILABLE.getReasonPhrase(),
+                        ex.getMessage(),
+                        request.getRequestURI(),
+                        null);
+
+        return ResponseEntity
+                .status(HttpStatus.SERVICE_UNAVAILABLE)
+                .body(response);
+    }
 }

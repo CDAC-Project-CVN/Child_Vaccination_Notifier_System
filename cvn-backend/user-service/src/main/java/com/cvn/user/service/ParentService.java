@@ -1,6 +1,5 @@
 package com.cvn.user.service;
 
-import org.modelmapper.ModelMapper;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,7 +21,6 @@ public class ParentService {
 	
 	private final ParentRepository parentRepository;
     private final UserRepository userRepository;
-    private final ModelMapper modelMapper;
     
     private Parent getLoggedInParent() {
 

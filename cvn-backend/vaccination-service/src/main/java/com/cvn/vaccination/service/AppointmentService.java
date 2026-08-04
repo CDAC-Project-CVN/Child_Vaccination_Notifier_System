@@ -11,11 +11,14 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.cvn.vaccination.client.UserServiceClient;
+import com.cvn.vaccination.dto.internal.ClinicInfoResponse;
 import com.cvn.vaccination.dto.request.BookAppointmentRequest;
 import com.cvn.vaccination.dto.response.AppointmentResponse;
 import com.cvn.vaccination.entity.Appointment;
 import com.cvn.vaccination.entity.VaccineSchedule;
 import com.cvn.vaccination.enums.AppointmentStatus;
+import com.cvn.vaccination.enums.ClinicStatus;
 import com.cvn.vaccination.enums.VaccinationStatus;
 import com.cvn.vaccination.exception.InvalidRequestException;
 import com.cvn.vaccination.exception.ResourceAlreadyExistsException;
@@ -35,12 +38,19 @@ public class AppointmentService {
     private final VaccineScheduleService vaccineScheduleService;
     private final ModelMapper modelMapper;
     
+    private final UserServiceClient userServiceClient;   // OpenFeign Client
+     
     
     /*
      * Book Appointment
      */
     
     public AppointmentResponse bookAppointment(BookAppointmentRequest request) {
+    	// clinic validation using OpenFeign
+    	ClinicInfoResponse clinic = userServiceClient.getClinicInfo(request.getClinicId()); 
+    	if (clinic.getStatus() != ClinicStatus.APPROVED) {
+    	    throw new InvalidRequestException("Clinic is not approved.");
+    	}
         VaccineSchedule schedule = getSchedule(request.getScheduleId());
         if (schedule.getStatus() == VaccinationStatus.COMPLETED) {
             throw new InvalidRequestException("Vaccination is already completed.");
