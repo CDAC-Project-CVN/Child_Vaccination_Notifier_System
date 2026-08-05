@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "notification_service.Controllers.TestController",
+    "Method": "SendTestEmail",
+    "RelativePath": "api/test/email",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
