@@ -1,0 +1,190 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|c:\\users\\hp\\desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\messaging\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|solutionrelative:messaging\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|c:\\users\\hp\\desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|solutionrelative:controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|c:\\users\\hp\\desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\services\\implementations\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|solutionrelative:services\\implementations\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|c:\\users\\hp\\desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|c:\\users\\hp\\desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\config\\rabbitmqconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|solutionrelative:config\\rabbitmqconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|c:\\users\\hp\\desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\events\\childregisteredevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|solutionrelative:events\\childregisteredevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|c:\\users\\hp\\desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\services\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|solutionrelative:services\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|c:\\users\\hp\\desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\models\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|solutionrelative:models\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|c:\\users\\hp\\desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\models\\rabbitmqsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|solutionrelative:models\\rabbitmqsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|c:\\users\\hp\\desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70CF1AC4-4DE2-45DB-92C4-86044ED2F0A6}|notification-service.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RabbitMQConstants.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\Config\\RabbitMQConstants.cs",
+              "RelativeDocumentMoniker": "Config\\RabbitMQConstants.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\Config\\RabbitMQConstants.cs",
+              "RelativeToolTip": "Config\\RabbitMQConstants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T14:25:23.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RabbitMQConsumer.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\Messaging\\RabbitMQConsumer.cs",
+              "RelativeDocumentMoniker": "Messaging\\RabbitMQConsumer.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\Messaging\\RabbitMQConsumer.cs",
+              "RelativeToolTip": "Messaging\\RabbitMQConsumer.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAYwGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T14:20:51.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RabbitMQSettings.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\Models\\RabbitMQSettings.cs",
+              "RelativeDocumentMoniker": "Models\\RabbitMQSettings.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\Models\\RabbitMQSettings.cs",
+              "RelativeToolTip": "Models\\RabbitMQSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T14:14:08.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TestController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\Controllers\\TestController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TestController.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\Controllers\\TestController.cs",
+              "RelativeToolTip": "Controllers\\TestController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T12:33:21.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAABsAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T12:31:16.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-04T12:29:42.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\Services\\Implementations\\EmailService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\EmailService.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\Services\\Implementations\\EmailService.cs",
+              "RelativeToolTip": "Services\\Implementations\\EmailService.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwDUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T12:28:19.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\Services\\Interfaces\\IEmailService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IEmailService.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\Services\\Interfaces\\IEmailService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T12:26:59.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmailSettings.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\Models\\EmailSettings.cs",
+              "RelativeDocumentMoniker": "Models\\EmailSettings.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\Models\\EmailSettings.cs",
+              "RelativeToolTip": "Models\\EmailSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T12:25:47.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ChildRegisteredEvent.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\Events\\ChildRegisteredEvent.cs",
+              "RelativeDocumentMoniker": "Events\\ChildRegisteredEvent.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\sunbeam\\practice\\program\\dotnet\\notification-service\\Events\\ChildRegisteredEvent.cs",
+              "RelativeToolTip": "Events\\ChildRegisteredEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T12:23:31.989Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
